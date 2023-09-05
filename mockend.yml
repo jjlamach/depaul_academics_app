@@ -1,8 +1,3 @@
-#  User:
-#    hasMany: [Post]
-#    # You can also provide all the data yourself and not use random generators
-#    data: [{ name: Alice }] # create a single user
-
 models:
   User:
     fake:
@@ -19,6 +14,14 @@ models:
       password: password
       imageURL: imageURL
       language: language
+
+  Course:
+    fake:
+      _count: 100
+      courseName: { loremWords: [1, 3] }
+      courseDescription: { loremParagraphs: [20, 100] }
+      numerify: 'https://loremflickr.com/320/240/college,books/all'
+
 
 
 
