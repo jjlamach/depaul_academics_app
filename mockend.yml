@@ -18,9 +18,9 @@ models:
   Course:
     fake:
       _count: 100
-      courseName: { loremWords: [1, 3] }
+      courseName: { loremWords: [5, 10] }
       courseDescription: { loremParagraphs: [20, 100] }
-      numerify: 'https://loremflickr.com/320/240/college,books/all'
+      imageURL:
 
 
 
