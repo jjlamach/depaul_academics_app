@@ -1,0 +1,25 @@
+#  User:
+#    hasMany: [Post]
+#    # You can also provide all the data yourself and not use random generators
+#    data: [{ name: Alice }] # create a single user
+
+models:
+  User:
+    fake:
+      _count: 50
+      name: firstName
+      lastName: lastName
+      city: city
+      country: country
+      zip: zip
+      email: email
+      online: { bool: 90 }
+      phone: phone
+      username: username
+      password: password
+      imageURL: imageURL
+      language: language
+
+
+
+
