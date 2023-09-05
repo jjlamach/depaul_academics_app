@@ -27,7 +27,7 @@ models:
       _count: 860
       name: firstName
       lastName: lastName
-      subject: { sentence: 5}
+      subject: { loremWords: [5, 10] }
       city: city
       country: country
       zip: zip
