@@ -27,6 +27,7 @@ models:
       _count: 860
       name: firstName
       lastName: lastName
+      subject: { sentence: [5] }
       city: city
       country: country
       zip: zip
