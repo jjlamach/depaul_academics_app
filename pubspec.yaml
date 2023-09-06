@@ -54,6 +54,7 @@ flutter:
 
   assets:
     - lib/assets/depaul_logo.jpg
+    - lib/assets/DULOGO_no_background.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
