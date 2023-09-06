@@ -1,4 +1,4 @@
-import 'package:depaul_campus_connect/app/screens/home/home_page_form_view.dart';
+import 'package:depaul_campus_connect/app/screens/home/widgets/home_page_form_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
