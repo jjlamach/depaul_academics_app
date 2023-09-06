@@ -33,6 +33,10 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   flutter_riverpod: ^2.4.0
+  firebase_core: ^2.15.1
+  firebase_ui_auth: ^1.7.0
+  firebase_auth: ^4.9.0
+  firebase_dynamic_links: ^5.3.5
 
 dev_dependencies:
   flutter_test:
