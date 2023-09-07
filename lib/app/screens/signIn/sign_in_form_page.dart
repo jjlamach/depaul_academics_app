@@ -1,20 +1,28 @@
 import 'package:depaul_campus_connect/common/dimens.dart';
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart' hide EmailAuthProvider;
 import 'package:flutter/material.dart';
 
-class HomePageForm extends StatefulWidget {
-  const HomePageForm({super.key});
+class SignInFormPage extends StatefulWidget {
+  const SignInFormPage({super.key});
 
   @override
-  State<HomePageForm> createState() => _HomePageFormState();
+  State<SignInFormPage> createState() => _SignInFormPageState();
 }
 
-class _HomePageFormState extends State<HomePageForm> {
+class _SignInFormPageState extends State<SignInFormPage> {
   @override
   Widget build(BuildContext context) {
     return SignInScreen(
       providers: [
         EmailAuthProvider(),
+      ],
+      actions: [
+        AuthStateChangeAction<SignedIn>(
+          (context, state) {
+            Navigator.pushReplacementNamed(context, '/home');
+          },
+        ),
       ],
       headerMaxExtent: MediaQuery.of(context).size.height * 0.3,
       headerBuilder: (context, constraints, shrinkOffset) {

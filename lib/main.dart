@@ -1,4 +1,5 @@
 import 'package:depaul_campus_connect/app/screens/home/home_page.dart';
+import 'package:depaul_campus_connect/app/screens/signIn/sign_in_page.dart';
 import 'package:depaul_campus_connect/common/dimens.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_ui_auth/firebase_ui_auth.dart' as FirebaseUIAuth;
@@ -69,7 +70,13 @@ class DePaulUCampusConnect extends StatelessWidget {
         colorScheme: kColorScheme,
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      routes: {
+        "/": (context) {
+          return const SignInPage();
+        },
+        "/home": (context) => const HomePage(),
+      },
+      // home: const HomePage(),
     );
   }
 }
