@@ -1,5 +1,4 @@
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:depaul_campus_connect/app/screens/courses/bloc/courses_cubit.dart';
 import 'package:depaul_campus_connect/common/dimens.dart';
 import 'package:depaul_campus_connect/main.dart';
@@ -70,7 +69,7 @@ class CoursesPage extends StatelessWidget {
                                 Expanded(
                                   child: Padding(
                                     padding: const EdgeInsets.only(
-                                      top: 20,
+                                      top: 10,
                                       left: 20,
                                     ),
                                     child: Column(
@@ -140,19 +139,29 @@ class CoursesPage extends StatelessWidget {
                 },
               ),
             ),
-            BlocConsumer<CoursesCubit, CoursesState>(
-              listener: (context, state) => {},
-              builder: (context, state) {
-                final totalCourses = state.whenOrNull(
-                  loaded: (courses) => courses.length,
-                );
-                return Padding(
-                  padding: EdgeInsets.all(40.0),
-                  child: Text(
-                    '${totalCourses ?? 0} credits for this Quarter',
+            Padding(
+              padding: const EdgeInsets.only(bottom: 40.0),
+              child: Column(
+                children: [
+                  BlocConsumer<CoursesCubit, CoursesState>(
+                    listener: (context, state) => {},
+                    builder: (context, state) {
+                      final totalCourses = state.whenOrNull(
+                        loaded: (courses) => courses.length,
+                      );
+                      return Text(
+                        '${totalCourses ?? 0} courses on this Quarter',
+                      );
+                    },
                   ),
-                );
-              },
+                  Text(
+                    "16/240 for graduation",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
             )
           ],
         ),
