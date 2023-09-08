@@ -1,5 +1,3 @@
 models:
   Course:
-    data: [
-      { name: 'CSC 241: Intro to Computer Science' , courseDescription: 'An introduction to problem solving, algorithms and structured programming using a higher-level programming language.', professor: 'Dexter', credits: 4 }
-    ]
+    data: [ { name: 'CSC 241: Intro to Computer Science' , courseDescription: 'An introduction to problem solving, algorithms and structured programming using a higher-level programming language.', professor: 'Dexter', credits: 4 } ]
