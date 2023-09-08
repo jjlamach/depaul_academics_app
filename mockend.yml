@@ -18,11 +18,11 @@ models:
 
   Course:
     fake:
-      _count: 450
+      _count: 4
       courseName: { loremWords: [5, 10] }
       courseDescription: { loremParagraphs: [20, 100] }
       imageURL: imageURL
-      professor: { loremWords: [5, 10] }
+      professor: { firstName: firstName }
 
   Professor:
     fake:

@@ -44,6 +44,7 @@ dependencies:
   logger: ^2.0.2
   retrofit: ^4.0.1 #http client wrapper
   get_it: ^7.6.4 # for dependency injection/services locator in widgets
+  auto_size_text: ^3.0.0
 
 dev_dependencies:
   flutter_test:

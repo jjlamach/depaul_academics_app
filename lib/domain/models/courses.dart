@@ -10,6 +10,7 @@ class Courses with _$Courses {
     required String courseName,
     required double id,
     String? imageUrl,
+    required String professor,
   }) = _Courses;
 
   factory Courses.fromJson(Map<String, dynamic> json) =>
