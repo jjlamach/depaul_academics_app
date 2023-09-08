@@ -9,11 +9,13 @@ models:
       zip: zip
       email: email
       online: { bool: 90 }
+      enrolled: {bool: 90}
       phone: phone
       username: username
       password: password
       imageURL: imageURL
       language: language
+      hasMany: [Course]
 
   Course:
     fake:
@@ -21,6 +23,7 @@ models:
       courseName: { loremWords: [5, 10] }
       courseDescription: { loremParagraphs: [20, 100] }
       imageURL: imageURL
+      belongsTo: [User]
 
   Professor:
     fake:
