@@ -23,16 +23,30 @@ class CoursesPage extends StatelessWidget {
                   backgroundColor: Theme.of(context).colorScheme.primary,
                 ),
               ),
-              loaded: (courses) => ListView.separated(
-                separatorBuilder: (context, index) =>
-                    const SizedBox(height: 10.0),
-                itemCount: 4,
-                padding: const EdgeInsets.all(10.0),
-                itemBuilder: (context, index) => Container(
-                  height: 50.0,
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).colorScheme.secondary,
+              loaded: (courses) => Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ListView.separated(
+                  separatorBuilder: (context, index) => const SizedBox(
+                    height: 10.0,
                   ),
+                  itemCount: 4,
+                  padding: const EdgeInsets.all(10.0),
+                  itemBuilder: (context, index) {
+                    return Container(
+                      decoration: BoxDecoration(
+                        color: Colors.grey.shade200,
+                      ),
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Icon(Icons.person),
+                            ],
+                          ),
+                        ],
+                      ),
+                    );
+                  },
                 ),
               ),
               orElse: () => const SizedBox.shrink(),
