@@ -31,7 +31,6 @@ models:
         professor: "Jimmy Neutron",
         credits: 4
       },
-      {
         {
           name: "CSC 300: Data Structures I",
           courseDescription: "This is the first course in a two-course sequence on data structures using Java.",
@@ -46,7 +45,6 @@ models:
           professor: "Edward T",
           credits: 4
         }
-      }
     ]
 
 
