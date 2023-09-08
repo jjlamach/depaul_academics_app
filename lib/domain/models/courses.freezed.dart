@@ -23,7 +23,7 @@ mixin _$Courses {
   String get courseDescription => throw _privateConstructorUsedError;
   String get courseName => throw _privateConstructorUsedError;
   double get id => throw _privateConstructorUsedError;
-  String get imageUrl => throw _privateConstructorUsedError;
+  String? get imageUrl => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -39,7 +39,7 @@ abstract class $CoursesCopyWith<$Res> {
       {String courseDescription,
       String courseName,
       double id,
-      String imageUrl});
+      String? imageUrl});
 }
 
 /// @nodoc
@@ -58,7 +58,7 @@ class _$CoursesCopyWithImpl<$Res, $Val extends Courses>
     Object? courseDescription = null,
     Object? courseName = null,
     Object? id = null,
-    Object? imageUrl = null,
+    Object? imageUrl = freezed,
   }) {
     return _then(_value.copyWith(
       courseDescription: null == courseDescription
@@ -73,10 +73,10 @@ class _$CoursesCopyWithImpl<$Res, $Val extends Courses>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as double,
-      imageUrl: null == imageUrl
+      imageUrl: freezed == imageUrl
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -92,7 +92,7 @@ abstract class _$$_CoursesCopyWith<$Res> implements $CoursesCopyWith<$Res> {
       {String courseDescription,
       String courseName,
       double id,
-      String imageUrl});
+      String? imageUrl});
 }
 
 /// @nodoc
@@ -108,7 +108,7 @@ class __$$_CoursesCopyWithImpl<$Res>
     Object? courseDescription = null,
     Object? courseName = null,
     Object? id = null,
-    Object? imageUrl = null,
+    Object? imageUrl = freezed,
   }) {
     return _then(_$_Courses(
       courseDescription: null == courseDescription
@@ -123,10 +123,10 @@ class __$$_CoursesCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as double,
-      imageUrl: null == imageUrl
+      imageUrl: freezed == imageUrl
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -138,7 +138,7 @@ class _$_Courses implements _Courses {
       {required this.courseDescription,
       required this.courseName,
       required this.id,
-      required this.imageUrl});
+      this.imageUrl});
 
   factory _$_Courses.fromJson(Map<String, dynamic> json) =>
       _$$_CoursesFromJson(json);
@@ -150,7 +150,7 @@ class _$_Courses implements _Courses {
   @override
   final double id;
   @override
-  final String imageUrl;
+  final String? imageUrl;
 
   @override
   String toString() {
@@ -195,7 +195,7 @@ abstract class _Courses implements Courses {
       {required final String courseDescription,
       required final String courseName,
       required final double id,
-      required final String imageUrl}) = _$_Courses;
+      final String? imageUrl}) = _$_Courses;
 
   factory _Courses.fromJson(Map<String, dynamic> json) = _$_Courses.fromJson;
 
@@ -206,7 +206,7 @@ abstract class _Courses implements Courses {
   @override
   double get id;
   @override
-  String get imageUrl;
+  String? get imageUrl;
   @override
   @JsonKey(ignore: true)
   _$$_CoursesCopyWith<_$_Courses> get copyWith =>
