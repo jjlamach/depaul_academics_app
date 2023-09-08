@@ -1,66 +1,28 @@
 models:
-  User:
-    fake:
-      _count: 99
-      name: firstName
-      lastName: lastName
-      city: city
-      country: country
-      zip: zip
-      email: email
-      online: { bool: 90 }
-      enrolled: {bool: 90}
-      phone: phone
-      username: username
-      password: password
-      imageURL: imageURL
-      language: language
-
   Course:
     data: [
       {
         name: "CSC 241: Intro to Computer Science",
         courseDescription: "An introduction to problem solving, algorithms and structured programming using a higher-level programming language.",
-        imageUrl: "",
         professor: "Dexter",
         credits: 4
-      }, {
+      },
+      {
         name: "CSC 242: Intro to Computer Science II",
         courseDescription: "An intermediate course in problem solving, algorithms and programming. Programming skills are further strengthened through more complex and larger programming assignments.",
-        imageUrl: "",
         professor: "Jimmy Neutron",
         credits: 4
       },
-        {
-          name: "CSC 300: Data Structures I",
-          courseDescription: "This is the first course in a two-course sequence on data structures using Java.",
-          imageUrl: "",
-          professor: "Jamerino R",
-          credits: 4
-        },
-        {
-          name: "MAT 140: Discrete Mathematics I",
-          courseDescription: "Introduction to combinatorics, basic probability, graph theory, propositional logic, singly-quantified statements, operational knowledge of set theory, functions, number systems.",
-          imageUrl: "",
-          professor: "Edward T",
-          credits: 4
-        }
+      {
+        name: "CSC 300: Data Structures I",
+        courseDescription: "This is the first course in a two-course sequence on data structures using Java.",
+        professor: "Jamerino R",
+        credits: 4
+      },
+      {
+        name: "MAT 140: Discrete Mathematics I",
+        courseDescription: "Introduction to combinatorics, basic probability, graph theory, propositional logic, singly-quantified statements, operational knowledge of set theory, functions, number systems.",
+        professor: "Edward T",
+        credits: 4
+      }
     ]
-
-
-  Professor:
-    fake:
-      _count: 200
-      name: firstName
-      lastName: lastName
-      subject: { loremWords: [5, 10] }
-      city: city
-      country: country
-      zip: zip
-      email: email
-      online: { bool: 90 }
-      phone: phone
-      username: username
-      password: password
-      imageURL: imageURL
-      language: language

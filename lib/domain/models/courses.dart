@@ -6,10 +6,8 @@ part 'courses.freezed.dart';
 @freezed
 class Courses with _$Courses {
   const factory Courses({
+    required String name,
     required String courseDescription,
-    required String courseName,
-    required double id,
-    String? imageUrl,
     required String professor,
   }) = _Courses;
 

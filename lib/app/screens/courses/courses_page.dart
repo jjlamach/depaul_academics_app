@@ -100,7 +100,7 @@ class CoursesPage extends StatelessWidget {
                                             text: "Course: ",
                                             children: [
                                               TextSpan(
-                                                text: courses[index].courseName,
+                                                text: courses[index].name,
                                                 style: const TextStyle(
                                                   fontWeight: FontWeight.normal,
                                                 ),

@@ -20,10 +20,8 @@ Courses _$CoursesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Courses {
+  String get name => throw _privateConstructorUsedError;
   String get courseDescription => throw _privateConstructorUsedError;
-  String get courseName => throw _privateConstructorUsedError;
-  double get id => throw _privateConstructorUsedError;
-  String? get imageUrl => throw _privateConstructorUsedError;
   String get professor => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -36,12 +34,7 @@ abstract class $CoursesCopyWith<$Res> {
   factory $CoursesCopyWith(Courses value, $Res Function(Courses) then) =
       _$CoursesCopyWithImpl<$Res, Courses>;
   @useResult
-  $Res call(
-      {String courseDescription,
-      String courseName,
-      double id,
-      String? imageUrl,
-      String professor});
+  $Res call({String name, String courseDescription, String professor});
 }
 
 /// @nodoc
@@ -57,29 +50,19 @@ class _$CoursesCopyWithImpl<$Res, $Val extends Courses>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? name = null,
     Object? courseDescription = null,
-    Object? courseName = null,
-    Object? id = null,
-    Object? imageUrl = freezed,
     Object? professor = null,
   }) {
     return _then(_value.copyWith(
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
       courseDescription: null == courseDescription
           ? _value.courseDescription
           : courseDescription // ignore: cast_nullable_to_non_nullable
               as String,
-      courseName: null == courseName
-          ? _value.courseName
-          : courseName // ignore: cast_nullable_to_non_nullable
-              as String,
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as double,
-      imageUrl: freezed == imageUrl
-          ? _value.imageUrl
-          : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
       professor: null == professor
           ? _value.professor
           : professor // ignore: cast_nullable_to_non_nullable
@@ -95,12 +78,7 @@ abstract class _$$_CoursesCopyWith<$Res> implements $CoursesCopyWith<$Res> {
       __$$_CoursesCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String courseDescription,
-      String courseName,
-      double id,
-      String? imageUrl,
-      String professor});
+  $Res call({String name, String courseDescription, String professor});
 }
 
 /// @nodoc
@@ -113,29 +91,19 @@ class __$$_CoursesCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? name = null,
     Object? courseDescription = null,
-    Object? courseName = null,
-    Object? id = null,
-    Object? imageUrl = freezed,
     Object? professor = null,
   }) {
     return _then(_$_Courses(
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
       courseDescription: null == courseDescription
           ? _value.courseDescription
           : courseDescription // ignore: cast_nullable_to_non_nullable
               as String,
-      courseName: null == courseName
-          ? _value.courseName
-          : courseName // ignore: cast_nullable_to_non_nullable
-              as String,
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as double,
-      imageUrl: freezed == imageUrl
-          ? _value.imageUrl
-          : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
       professor: null == professor
           ? _value.professor
           : professor // ignore: cast_nullable_to_non_nullable
@@ -148,29 +116,23 @@ class __$$_CoursesCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Courses implements _Courses {
   const _$_Courses(
-      {required this.courseDescription,
-      required this.courseName,
-      required this.id,
-      this.imageUrl,
+      {required this.name,
+      required this.courseDescription,
       required this.professor});
 
   factory _$_Courses.fromJson(Map<String, dynamic> json) =>
       _$$_CoursesFromJson(json);
 
   @override
+  final String name;
+  @override
   final String courseDescription;
-  @override
-  final String courseName;
-  @override
-  final double id;
-  @override
-  final String? imageUrl;
   @override
   final String professor;
 
   @override
   String toString() {
-    return 'Courses(courseDescription: $courseDescription, courseName: $courseName, id: $id, imageUrl: $imageUrl, professor: $professor)';
+    return 'Courses(name: $name, courseDescription: $courseDescription, professor: $professor)';
   }
 
   @override
@@ -178,21 +140,17 @@ class _$_Courses implements _Courses {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Courses &&
+            (identical(other.name, name) || other.name == name) &&
             (identical(other.courseDescription, courseDescription) ||
                 other.courseDescription == courseDescription) &&
-            (identical(other.courseName, courseName) ||
-                other.courseName == courseName) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.imageUrl, imageUrl) ||
-                other.imageUrl == imageUrl) &&
             (identical(other.professor, professor) ||
                 other.professor == professor));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, courseDescription, courseName, id, imageUrl, professor);
+  int get hashCode =>
+      Object.hash(runtimeType, name, courseDescription, professor);
 
   @JsonKey(ignore: true)
   @override
@@ -210,22 +168,16 @@ class _$_Courses implements _Courses {
 
 abstract class _Courses implements Courses {
   const factory _Courses(
-      {required final String courseDescription,
-      required final String courseName,
-      required final double id,
-      final String? imageUrl,
+      {required final String name,
+      required final String courseDescription,
       required final String professor}) = _$_Courses;
 
   factory _Courses.fromJson(Map<String, dynamic> json) = _$_Courses.fromJson;
 
   @override
+  String get name;
+  @override
   String get courseDescription;
-  @override
-  String get courseName;
-  @override
-  double get id;
-  @override
-  String? get imageUrl;
   @override
   String get professor;
   @override
