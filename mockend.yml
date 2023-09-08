@@ -15,7 +15,7 @@ models:
       password: password
       imageURL: imageURL
       language: language
-      hasMany: [ Course ]
+      hasMany: [Course]
 
   Course:
     fake:
@@ -23,7 +23,7 @@ models:
       courseName: { loremWords: [5, 10] }
       courseDescription: { loremParagraphs: [20, 100] }
       imageURL: imageURL
-      belongsTo: [ User ]
+      belongsTo: [User]
 
   Professor:
     fake:
