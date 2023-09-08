@@ -1,3 +1,4 @@
+import 'package:depaul_campus_connect/app/screens/courses/courses_page.dart';
 import 'package:depaul_campus_connect/app/screens/home/home_page.dart';
 import 'package:depaul_campus_connect/app/screens/signIn/sign_in_page.dart';
 import 'package:depaul_campus_connect/common/dimens.dart';
@@ -41,6 +42,11 @@ class DePaulUCampusConnect extends StatelessWidget {
     return MaterialApp(
       title: 'Mini DU Campus Connect',
       theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          iconTheme: IconThemeData(
+            color: Colors.white,
+          ),
+        ),
         inputDecorationTheme: InputDecorationTheme(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(Dimens.borderRadius),
@@ -75,6 +81,7 @@ class DePaulUCampusConnect extends StatelessWidget {
           return const SignInPage();
         },
         "/home": (context) => const HomePage(),
+        "/courses": (context) => const CoursesPage(),
       },
       // home: const HomePage(),
     );

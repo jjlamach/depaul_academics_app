@@ -1,7 +1,7 @@
 models:
   User:
     fake:
-      _count: 5000
+      _count: 100
       name: firstName
       lastName: lastName
       city: city
@@ -17,14 +17,14 @@ models:
 
   Course:
     fake:
-      _count: 600
+      _count: 450
       courseName: { loremWords: [5, 10] }
       courseDescription: { loremParagraphs: [20, 100] }
       imageURL: imageURL
 
   Professor:
     fake:
-      _count: 860
+      _count: 200
       name: firstName
       lastName: lastName
       subject: { loremWords: [5, 10] }
