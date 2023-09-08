@@ -1,28 +1,5 @@
 models:
   Course:
     data: [
-      {
-        name: "CSC 241: Intro to Computer Science",
-        courseDescription: "An introduction to problem solving, algorithms and structured programming using a higher-level programming language.",
-        professor: "Dexter",
-        credits: 4
-      },
-      {
-        name: "CSC 242: Intro to Computer Science II",
-        courseDescription: "An intermediate course in problem solving, algorithms and programming. Programming skills are further strengthened through more complex and larger programming assignments.",
-        professor: "Jimmy Neutron",
-        credits: 4
-      },
-      {
-        name: "CSC 300: Data Structures I",
-        courseDescription: "This is the first course in a two-course sequence on data structures using Java.",
-        professor: "Jamerino R",
-        credits: 4
-      },
-      {
-        name: "MAT 140: Discrete Mathematics I",
-        courseDescription: "Introduction to combinatorics, basic probability, graph theory, propositional logic, singly-quantified statements, operational knowledge of set theory, functions, number systems.",
-        professor: "Edward T",
-        credits: 4
-      }
+      { name: 'CSC 241: Intro to Computer Science' , courseDescription: 'An introduction to problem solving, algorithms and structured programming using a higher-level programming language.', professor: 'Dexter', credits: 4 }
     ]
