@@ -12,7 +12,7 @@ abstract class DePaulCampusConnectApi {
     String baseUrl,
   }) = _DePaulCampusConnectApi;
 
-  @GET('/users')
+  @GET('/professors')
   Future<List<User>> getUsers();
 
   @GET('/courses')

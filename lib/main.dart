@@ -1,11 +1,14 @@
 import 'package:depaul_campus_connect/app/screens/courses/bloc/courses_cubit.dart';
 import 'package:depaul_campus_connect/app/screens/courses/courses_page.dart';
 import 'package:depaul_campus_connect/app/screens/home/home_page.dart';
+import 'package:depaul_campus_connect/app/screens/professors/bloc/professors_cubit.dart';
+import 'package:depaul_campus_connect/app/screens/professors/professors_page.dart';
 import 'package:depaul_campus_connect/app/screens/signIn/sign_in_page.dart';
 import 'package:depaul_campus_connect/common/dimens.dart';
 import 'package:depaul_campus_connect/data/api/depaul_campus_connect_api.dart';
 import 'package:depaul_campus_connect/data/repositories/depaul_campus_connect_repository.dart';
 import 'package:depaul_campus_connect/domain/usecase/get_courses_usecase.dart';
+import 'package:depaul_campus_connect/domain/usecase/get_users_usecase.dart';
 import 'package:dio/dio.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_ui_auth/firebase_ui_auth.dart' as FirebaseUIAuth;
@@ -21,6 +24,7 @@ final getIt = GetIt.instance;
 
 void setUpUseCases() {
   getIt.registerFactory(() => GetCoursesUseCase(getIt.get()));
+  getIt.registerFactory(() => GetUsersUseCase(getIt.get()));
 }
 
 void setUpDependencies() {
@@ -31,6 +35,7 @@ void setUpDependencies() {
 
 void setUpBlocsAndCubits() {
   getIt.registerFactory(() => CoursesCubit(getIt.get()));
+  getIt.registerFactory(() => ProfessorCubit(getIt.get()));
 }
 
 void setUp() {
@@ -111,6 +116,7 @@ class DePaulUCampusConnect extends StatelessWidget {
         },
         "/home": (context) => const HomePage(),
         "/courses": (context) => const CoursesPage(),
+        "/professors": (context) => const ProfessorsPage(),
       },
       // home: const HomePage(),
     );

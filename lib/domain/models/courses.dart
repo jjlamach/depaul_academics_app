@@ -9,6 +9,7 @@ class Courses with _$Courses {
     required String name,
     required String description,
     required String professor,
+    required String imageUrl,
     required int credits,
   }) = _Courses;
 

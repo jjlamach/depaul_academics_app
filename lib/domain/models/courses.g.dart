@@ -10,6 +10,7 @@ _$_Courses _$$_CoursesFromJson(Map<String, dynamic> json) => _$_Courses(
       name: json['name'] as String,
       description: json['description'] as String,
       professor: json['professor'] as String,
+      imageUrl: json['imageUrl'] as String,
       credits: json['credits'] as int,
     );
 
@@ -18,5 +19,6 @@ Map<String, dynamic> _$$_CoursesToJson(_$_Courses instance) =>
       'name': instance.name,
       'description': instance.description,
       'professor': instance.professor,
+      'imageUrl': instance.imageUrl,
       'credits': instance.credits,
     };

@@ -47,7 +47,7 @@ class HomePage extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: () => {},
+            onTap: () => Navigator.of(context).pushNamed("/professors"),
             child: const OptionsCardView(
               cardName: "Professors",
               icon: FontAwesomeIcons.chalkboardTeacher,

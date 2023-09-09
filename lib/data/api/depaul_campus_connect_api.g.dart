@@ -34,7 +34,7 @@ class _DePaulCampusConnectApi implements DePaulCampusConnectApi {
     )
             .compose(
               _dio.options,
-              '/users',
+              '/professors',
               queryParameters: queryParameters,
               data: _data,
             )

@@ -52,7 +52,7 @@ class CourseListView extends StatelessWidget {
                               child: Image.network(
                                 height: 100.0,
                                 fit: BoxFit.fill,
-                                "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2973&q=80",
+                                courses[index].imageUrl,
                               ),
                             ),
                           ],
@@ -60,7 +60,7 @@ class CourseListView extends StatelessWidget {
                         Expanded(
                           child: Padding(
                             padding: const EdgeInsets.only(
-                              top: 10,
+                              top: 15,
                               left: 20,
                               bottom: 10,
                               right: 20,
@@ -99,6 +99,7 @@ class CourseListView extends StatelessWidget {
                                       ),
                                     ],
                                   ),
+                                  overflow: TextOverflow.ellipsis,
                                 ),
                                 AutoSizeText.rich(
                                   style: const TextStyle(

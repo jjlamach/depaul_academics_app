@@ -23,6 +23,7 @@ mixin _$Courses {
   String get name => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
   String get professor => throw _privateConstructorUsedError;
+  String get imageUrl => throw _privateConstructorUsedError;
   int get credits => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -35,7 +36,12 @@ abstract class $CoursesCopyWith<$Res> {
   factory $CoursesCopyWith(Courses value, $Res Function(Courses) then) =
       _$CoursesCopyWithImpl<$Res, Courses>;
   @useResult
-  $Res call({String name, String description, String professor, int credits});
+  $Res call(
+      {String name,
+      String description,
+      String professor,
+      String imageUrl,
+      int credits});
 }
 
 /// @nodoc
@@ -54,6 +60,7 @@ class _$CoursesCopyWithImpl<$Res, $Val extends Courses>
     Object? name = null,
     Object? description = null,
     Object? professor = null,
+    Object? imageUrl = null,
     Object? credits = null,
   }) {
     return _then(_value.copyWith(
@@ -68,6 +75,10 @@ class _$CoursesCopyWithImpl<$Res, $Val extends Courses>
       professor: null == professor
           ? _value.professor
           : professor // ignore: cast_nullable_to_non_nullable
+              as String,
+      imageUrl: null == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
               as String,
       credits: null == credits
           ? _value.credits
@@ -84,7 +95,12 @@ abstract class _$$_CoursesCopyWith<$Res> implements $CoursesCopyWith<$Res> {
       __$$_CoursesCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name, String description, String professor, int credits});
+  $Res call(
+      {String name,
+      String description,
+      String professor,
+      String imageUrl,
+      int credits});
 }
 
 /// @nodoc
@@ -100,6 +116,7 @@ class __$$_CoursesCopyWithImpl<$Res>
     Object? name = null,
     Object? description = null,
     Object? professor = null,
+    Object? imageUrl = null,
     Object? credits = null,
   }) {
     return _then(_$_Courses(
@@ -114,6 +131,10 @@ class __$$_CoursesCopyWithImpl<$Res>
       professor: null == professor
           ? _value.professor
           : professor // ignore: cast_nullable_to_non_nullable
+              as String,
+      imageUrl: null == imageUrl
+          ? _value.imageUrl
+          : imageUrl // ignore: cast_nullable_to_non_nullable
               as String,
       credits: null == credits
           ? _value.credits
@@ -130,6 +151,7 @@ class _$_Courses implements _Courses {
       {required this.name,
       required this.description,
       required this.professor,
+      required this.imageUrl,
       required this.credits});
 
   factory _$_Courses.fromJson(Map<String, dynamic> json) =>
@@ -142,11 +164,13 @@ class _$_Courses implements _Courses {
   @override
   final String professor;
   @override
+  final String imageUrl;
+  @override
   final int credits;
 
   @override
   String toString() {
-    return 'Courses(name: $name, description: $description, professor: $professor, credits: $credits)';
+    return 'Courses(name: $name, description: $description, professor: $professor, imageUrl: $imageUrl, credits: $credits)';
   }
 
   @override
@@ -159,13 +183,15 @@ class _$_Courses implements _Courses {
                 other.description == description) &&
             (identical(other.professor, professor) ||
                 other.professor == professor) &&
+            (identical(other.imageUrl, imageUrl) ||
+                other.imageUrl == imageUrl) &&
             (identical(other.credits, credits) || other.credits == credits));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, name, description, professor, credits);
+      Object.hash(runtimeType, name, description, professor, imageUrl, credits);
 
   @JsonKey(ignore: true)
   @override
@@ -186,6 +212,7 @@ abstract class _Courses implements Courses {
       {required final String name,
       required final String description,
       required final String professor,
+      required final String imageUrl,
       required final int credits}) = _$_Courses;
 
   factory _Courses.fromJson(Map<String, dynamic> json) = _$_Courses.fromJson;
@@ -196,6 +223,8 @@ abstract class _Courses implements Courses {
   String get description;
   @override
   String get professor;
+  @override
+  String get imageUrl;
   @override
   int get credits;
   @override

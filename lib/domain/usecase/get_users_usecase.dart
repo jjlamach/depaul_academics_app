@@ -2,11 +2,11 @@ import 'package:depaul_campus_connect/data/repositories/depaul_campus_connect_re
 import 'package:depaul_campus_connect/domain/models/user.dart';
 
 class GetUsersUseCase {
-  final DePaulCampusConnectRepository repository;
+  final DePaulCampusConnectRepository _repository;
 
-  const GetUsersUseCase(this.repository);
+  const GetUsersUseCase(this._repository);
 
   Future<List<User>> getUsers() async {
-    return await repository.getUsers();
+    return await _repository.getUsers();
   }
 }
