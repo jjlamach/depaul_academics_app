@@ -7,33 +7,34 @@ part of 'user.dart';
 // **************************************************************************
 
 _$_User _$$_UserFromJson(Map<String, dynamic> json) => _$_User(
-      city: json['city'] as String,
-      country: json['country'] as String,
-      email: json['email'] as String,
-      id: (json['id'] as num).toDouble(),
-      imageUrl: json['imageUrl'] as String,
-      language: json['language'] as String,
-      lastName: json['lastName'] as String,
+      id: json['id'] as int,
       name: json['name'] as String,
-      online: json['online'] as bool,
-      password: json['password'] as String,
-      phone: json['phone'] as String,
       username: json['username'] as String,
-      zip: json['zip'] as String,
+      email: json['email'] as String,
+      address: Address.fromJson(json['address'] as Map<String, dynamic>),
+      phone: json['phone'] as String,
     );
 
 Map<String, dynamic> _$$_UserToJson(_$_User instance) => <String, dynamic>{
-      'city': instance.city,
-      'country': instance.country,
-      'email': instance.email,
       'id': instance.id,
-      'imageUrl': instance.imageUrl,
-      'language': instance.language,
-      'lastName': instance.lastName,
       'name': instance.name,
-      'online': instance.online,
-      'password': instance.password,
-      'phone': instance.phone,
       'username': instance.username,
-      'zip': instance.zip,
+      'email': instance.email,
+      'address': instance.address,
+      'phone': instance.phone,
+    };
+
+_$_Address _$$_AddressFromJson(Map<String, dynamic> json) => _$_Address(
+      street: json['street'] as String,
+      suite: json['suite'] as String,
+      city: json['city'] as String,
+      zipcode: json['zipcode'] as String,
+    );
+
+Map<String, dynamic> _$$_AddressToJson(_$_Address instance) =>
+    <String, dynamic>{
+      'street': instance.street,
+      'suite': instance.suite,
+      'city': instance.city,
+      'zipcode': instance.zipcode,
     };

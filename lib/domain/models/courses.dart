@@ -7,8 +7,9 @@ part 'courses.freezed.dart';
 class Courses with _$Courses {
   const factory Courses({
     required String name,
-    required String courseDescription,
+    required String description,
     required String professor,
+    required int credits,
   }) = _Courses;
 
   factory Courses.fromJson(Map<String, dynamic> json) =>

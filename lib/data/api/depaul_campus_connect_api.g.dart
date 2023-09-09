@@ -13,7 +13,7 @@ class _DePaulCampusConnectApi implements DePaulCampusConnectApi {
     this._dio, {
     this.baseUrl,
   }) {
-    baseUrl ??= 'https://mockend.com/api/jjlamach/depaul_academics_app/';
+    baseUrl ??= 'https://demo2219728.mockable.io/';
   }
 
   final Dio _dio;

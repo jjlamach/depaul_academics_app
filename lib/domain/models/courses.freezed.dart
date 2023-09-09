@@ -21,8 +21,9 @@ Courses _$CoursesFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Courses {
   String get name => throw _privateConstructorUsedError;
-  String get courseDescription => throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
   String get professor => throw _privateConstructorUsedError;
+  int get credits => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,7 +35,7 @@ abstract class $CoursesCopyWith<$Res> {
   factory $CoursesCopyWith(Courses value, $Res Function(Courses) then) =
       _$CoursesCopyWithImpl<$Res, Courses>;
   @useResult
-  $Res call({String name, String courseDescription, String professor});
+  $Res call({String name, String description, String professor, int credits});
 }
 
 /// @nodoc
@@ -51,22 +52,27 @@ class _$CoursesCopyWithImpl<$Res, $Val extends Courses>
   @override
   $Res call({
     Object? name = null,
-    Object? courseDescription = null,
+    Object? description = null,
     Object? professor = null,
+    Object? credits = null,
   }) {
     return _then(_value.copyWith(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      courseDescription: null == courseDescription
-          ? _value.courseDescription
-          : courseDescription // ignore: cast_nullable_to_non_nullable
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String,
       professor: null == professor
           ? _value.professor
           : professor // ignore: cast_nullable_to_non_nullable
               as String,
+      credits: null == credits
+          ? _value.credits
+          : credits // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -78,7 +84,7 @@ abstract class _$$_CoursesCopyWith<$Res> implements $CoursesCopyWith<$Res> {
       __$$_CoursesCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name, String courseDescription, String professor});
+  $Res call({String name, String description, String professor, int credits});
 }
 
 /// @nodoc
@@ -92,22 +98,27 @@ class __$$_CoursesCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = null,
-    Object? courseDescription = null,
+    Object? description = null,
     Object? professor = null,
+    Object? credits = null,
   }) {
     return _then(_$_Courses(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      courseDescription: null == courseDescription
-          ? _value.courseDescription
-          : courseDescription // ignore: cast_nullable_to_non_nullable
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String,
       professor: null == professor
           ? _value.professor
           : professor // ignore: cast_nullable_to_non_nullable
               as String,
+      credits: null == credits
+          ? _value.credits
+          : credits // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -117,8 +128,9 @@ class __$$_CoursesCopyWithImpl<$Res>
 class _$_Courses implements _Courses {
   const _$_Courses(
       {required this.name,
-      required this.courseDescription,
-      required this.professor});
+      required this.description,
+      required this.professor,
+      required this.credits});
 
   factory _$_Courses.fromJson(Map<String, dynamic> json) =>
       _$$_CoursesFromJson(json);
@@ -126,13 +138,15 @@ class _$_Courses implements _Courses {
   @override
   final String name;
   @override
-  final String courseDescription;
+  final String description;
   @override
   final String professor;
+  @override
+  final int credits;
 
   @override
   String toString() {
-    return 'Courses(name: $name, courseDescription: $courseDescription, professor: $professor)';
+    return 'Courses(name: $name, description: $description, professor: $professor, credits: $credits)';
   }
 
   @override
@@ -141,16 +155,17 @@ class _$_Courses implements _Courses {
         (other.runtimeType == runtimeType &&
             other is _$_Courses &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.courseDescription, courseDescription) ||
-                other.courseDescription == courseDescription) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
             (identical(other.professor, professor) ||
-                other.professor == professor));
+                other.professor == professor) &&
+            (identical(other.credits, credits) || other.credits == credits));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, name, courseDescription, professor);
+      Object.hash(runtimeType, name, description, professor, credits);
 
   @JsonKey(ignore: true)
   @override
@@ -169,17 +184,20 @@ class _$_Courses implements _Courses {
 abstract class _Courses implements Courses {
   const factory _Courses(
       {required final String name,
-      required final String courseDescription,
-      required final String professor}) = _$_Courses;
+      required final String description,
+      required final String professor,
+      required final int credits}) = _$_Courses;
 
   factory _Courses.fromJson(Map<String, dynamic> json) = _$_Courses.fromJson;
 
   @override
   String get name;
   @override
-  String get courseDescription;
+  String get description;
   @override
   String get professor;
+  @override
+  int get credits;
   @override
   @JsonKey(ignore: true)
   _$$_CoursesCopyWith<_$_Courses> get copyWith =>

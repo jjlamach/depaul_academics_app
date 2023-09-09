@@ -5,7 +5,7 @@ import 'package:retrofit/http.dart';
 
 part 'depaul_campus_connect_api.g.dart';
 
-@RestApi(baseUrl: 'https://mockend.com/api/jjlamach/depaul_academics_app/')
+@RestApi(baseUrl: 'https://demo2219728.mockable.io/')
 abstract class DePaulCampusConnectApi {
   factory DePaulCampusConnectApi(
     Dio dio, {
